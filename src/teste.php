@@ -30,6 +30,8 @@ include __DIR__."/conexao.php";
                 <tr>
                     <th>#ID</th>
                     <th>Nome</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
                     <th>Ações</th>
                 </tr>
             </thead>
