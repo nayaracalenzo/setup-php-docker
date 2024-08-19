@@ -11,8 +11,13 @@
     <h1 class='mt-3'> Contatinhos</h1>
     <hr> 
     <nav>
-        <a class="btn btn-outline-dark" href='/listar'>Listar</a>
-        <a class="btn btn-outline-dark" href='/cadastro'>Cadastrar</a>
+        <?php
+        $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+        ?>
+
+        <a class="<?php echo $url === '/contatos/listar'?'btn-dark' : 'btn btn-outline-dark'?>" href='/contatos/listar'>Listar Contatos</a>
+        <a class="<?php echo $url === '/contatos/adicionar'?'btn-dark' : 'btn btn-outline-dark'?>" href='/contatos/adicionar'>Cadastrar Contatos</a>
+        <a class="<?php echo $url === '/lugares/listar'?'btn-dark' : 'btn btn-outline-dark'?>" href='/lugares/listar'>Cadastrar Lugares</a>
+        <a class="<?php echo $url === '/lugares/adicionar'?'btn-dark' : 'btn btn-outline-dark'?>" href='/lugares/adicionar'>Cadastrar Lugares</a>
     </nav>
 </hr>
-    

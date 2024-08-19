@@ -1,0 +1,15 @@
+Estruturas de Código (Código Estruturado - Base):
+
+-Sequencial
+-Decisao (if)
+-Repeticao (for, foreach...)
+-Funcao
+
+Codigo Funcional:
+ - funcoes
+
+ Codigo orientado a objetos
+
+ create table tb_contatos (id int(11) unsigned primary key auto_increment, nome varchar(30) not null, email varchar(50), telefone varchar(11), data_cadastro varchar(20) not null);
+
+

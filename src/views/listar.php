@@ -10,17 +10,35 @@
             </thead>
             <tbody>
                 <?php
-                for ($i = 1; $i <= 10; $i++) {
+
+                // echo count($resultado->fetchAll());
+
+                 foreach ($dados as $cada) {
+                    $id = $cada['id'];
                     echo "
+                    
                     <tr>
-                        <td>{$i}</td>
-                        <td>Fulano</td>
-                        <td>fulano@email.com</td>
-                        <td>85 9 8888-9898</td>
-                        <td></td>
+                        <td>{$id}</td>
+                        <td>{$cada['nome']}</td
+                        <td>{$cada['email']}</td>
+                        <td>{$cada['telefone']}</td>
+                        <td>
+                            <a href='contatos/editar?id={$id}'>Editar</a>
+                            <a href='contatos/excluir?id={$id}' onClick='excluir({$id})'>Excluir</a>
+                        </td>
                     </tr>
                     ";
                 }
                 ?>
             </tbody>
 </table>
+<script>
+    function excluir (id) {
+        let resposta = confirm('Você tem certeza?')
+        
+        if (resposta === true) {
+            location.href = 'contatos/excluir?id='+id;
+        } 
+        
+    }
+</script>
